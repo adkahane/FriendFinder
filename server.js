@@ -11,10 +11,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // Route files
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+// require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 // Listener
 app.listen(PORT, function() {
-  console.log("App listening on PORT: ");
+  console.log("App listening on PORT: " + PORT);
 });
