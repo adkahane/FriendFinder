@@ -29,106 +29,106 @@
       </div>
       <hr>
       <div class="form-group">
-        <label for="questionOne"><h3><strong>Question 1</strong></h3>You really like eating raw garlic.</label>
+        <label for="questionOne"><h3><strong>Question 1</strong></h3>I'd rather be eating pie</label>
         <select class="form-control" id="questionOne">
-          <option>1 (Strongly Disagree)</option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5 (Strongly Agree)</option>
+          <option>5</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="questionTwo"><h3><strong>Question 2</strong></h3>You like the cold.</label>
+        <label for="questionTwo"><h3><strong>Question 2</strong></h3>You like cold weather</label>
         <select class="form-control" id="questionTwo">
-          <option>1 (Strongly Disagree)</option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5 (Strongly Agree)</option>
+          <option>5</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="questionThree"><h3><strong>Question 3</strong></h3>You really like eating raw garlic.</label>
+        <label for="questionThree"><h3><strong>Question 3</strong></h3>Garlic on everything!</label>
         <select class="form-control" id="questionThree">
-          <option>1 (Strongly Disagree)</option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5 (Strongly Agree)</option>
+          <option>5</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="questionFour"><h3><strong>Question 4</strong></h3>You really like eating raw garlic.</label>
+        <label for="questionFour"><h3><strong>Question 4</strong></h3>Creed (the band) isn't really that bad...</label>
         <select class="form-control" id="questionFour">
-          <option>1 (Strongly Disagree)</option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5 (Strongly Agree)</option>
+          <option>5</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="questionFive"><h3><strong>Question 5</strong></h3>You really like eating raw garlic.</label>
+        <label for="questionFive"><h3><strong>Question 5</strong></h3>It's first friday, and I'm going out on the town!</label>
         <select class="form-control" id="questionFive">
-          <option>1 (Strongly Disagree)</option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5 (Strongly Agree)</option>
+          <option>5</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="questionSix"><h3><strong>Question 6</strong></h3>You really like eating raw garlic.</label>
+        <label for="questionSix"><h3><strong>Question 6</strong></h3>Anime</label>
         <select class="form-control" id="questionSix">
-          <option>1 (Strongly Disagree)</option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5 (Strongly Agree)</option>
+          <option>5</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="questionSeven"><h3><strong>Question 7</strong></h3>You like the cold.</label>
+        <label for="questionSeven"><h3><strong>Question 7</strong></h3>The series Lost made sense if you really thing about it.</label>
         <select class="form-control" id="questionSeven">
-          <option>1 (Strongly Disagree)</option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5 (Strongly Agree)</option>
+          <option>5</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="questionEight"><h3><strong>Question 8</strong></h3>You really like eating raw garlic.</label>
+        <label for="questionEight"><h3><strong>Question 8</strong></h3>Rocky III is better than the original Rocky</label>
         <select class="form-control" id="questionEight">
-          <option>1 (Strongly Disagree)</option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5 (Strongly Agree)</option>
+          <option>5</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="questionNine"><h3><strong>Question 9</strong></h3>You really like eating raw garlic.</label>
+        <label for="questionNine"><h3><strong>Question 9</strong></h3>Tabs are better than spaces</label>
         <select class="form-control" id="questionNine">
-          <option>1 (Strongly Disagree)</option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5 (Strongly Agree)</option>
+          <option>5</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="questionTen"><h3><strong>Question 10</strong></h3>You really like eating raw garlic.</label>
+        <label for="questionTen"><h3><strong>Question 10</strong></h3>I am looking for my soulmate</label>
         <select class="form-control" id="questionTen">
-          <option>1 (Strongly Disagree)</option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
-          <option>5 (Strongly Agree)</option>
+          <option>5</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" id="submit" class="btn btn-primary">Submit</button>
     </form>
     <hr>
     <footer class="footer">
@@ -141,3 +141,48 @@
   </div>
 </body>
 </html>
+
+<script type="text/javascript">
+  $("#submit").on("click", function(event) {
+    debugger;
+    event.preventDefault();
+
+    var newProfile = {
+      profileName: $("#nameInput").val().trim(),
+      profilePhoto: $("#photoInput").val().trim(),
+      scores: [
+        $("#questionOne").val(),
+        $("#questionTwo").val(),
+        $("#questionThree").val(),
+        $("#questionFour").val(),
+        $("#questionFive").val(),
+        $("#questionSix").val(),
+        $("#questionSeven").val(),
+        $("#questionEight").val(),
+        $("#questionNine").val(),
+        $("#questionTen").val()
+      ]
+    };
+
+    console.log(newProfile);
+    
+    $.post("/api/friends", newProfile, function(data) {
+      console.log(data)
+      
+
+      // Clear the form when submitting
+      // $("#nameInput").val("");
+      // $("#photoInput").val("");
+      // $("#questionOne").val("");
+      // $("#questionTwo").val("");
+      // $("#questionThree").val("");
+      // $("#questionFour").val("");
+      // $("#questionFive").val("");
+      // $("#questionSix").val("");
+      // $("#questionSeven").val("");
+      // $("#questionEight").val("");
+      // $("#questionNine").val("");
+      // $("#questionTen").val("");
+    });
+  });
+</script>
