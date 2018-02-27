@@ -144,7 +144,6 @@
 
 <script type="text/javascript">
   $("#submit").on("click", function(event) {
-    debugger;
     event.preventDefault();
 
     var newProfile = {
@@ -163,26 +162,23 @@
         $("#questionTen").val()
       ]
     };
-
-    console.log(newProfile);
     
     $.post("/api/friends", newProfile, function(data) {
       console.log(data)
-      
 
       // Clear the form when submitting
-      // $("#nameInput").val("");
-      // $("#photoInput").val("");
-      // $("#questionOne").val("");
-      // $("#questionTwo").val("");
-      // $("#questionThree").val("");
-      // $("#questionFour").val("");
-      // $("#questionFive").val("");
-      // $("#questionSix").val("");
-      // $("#questionSeven").val("");
-      // $("#questionEight").val("");
-      // $("#questionNine").val("");
-      // $("#questionTen").val("");
+      $("#nameInput").val("");
+      $("#photoInput").val("");
+      $("#questionOne").val("");
+      $("#questionTwo").val("");
+      $("#questionThree").val("");
+      $("#questionFour").val("");
+      $("#questionFive").val("");
+      $("#questionSix").val("");
+      $("#questionSeven").val("");
+      $("#questionEight").val("");
+      $("#questionNine").val("");
+      $("#questionTen").val("");
     });
   });
 </script>
